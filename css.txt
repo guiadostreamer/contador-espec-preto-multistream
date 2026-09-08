@@ -1,0 +1,263 @@
+/*
+===============================================================================
+ CONTADOR DE ESPECTADORES GUIA PRETO MULTISTREAM — VERSÃO ESTÁTICA — CSS
+===============================================================================
+
+ Copyright © 2026 Leonardo — Guia do Streamer.
+ Todos os direitos reservados.
+
+ Projeto: Contador de Espectadores Guia Preto Multistream
+ Edição: preta estática com contornos brancos
+ Versão: 1.0.0
+ Identificador: GDS-VC-PRETO-260908-584217-CSS
+
+ Direção criativa, conceito, personalização, testes e publicação:
+ Leonardo — Guia do Streamer
+
+ Desenvolvimento técnico realizado com auxílio de Inteligência Artificial.
+
+ LICENÇA DE USO GRATUITO COM RESTRIÇÕES
+
+ É PERMITIDO:
+ - Usar este código em suas próprias transmissões pessoais ou monetizadas.
+ - Personalizar e modificar o código exclusivamente para uso próprio.
+
+ NÃO É PERMITIDO:
+ - Redistribuir, republicar, revender, sublicenciar ou fazer reupload.
+ - Disponibilizar o código original ou modificado em outros repositórios,
+   sites, vídeos, grupos, packs, downloads ou plataformas.
+ - Remover ou alterar este aviso, os créditos ou a identificação do projeto.
+ - Apresentar este projeto, layout ou código como criação própria.
+
+ Para compartilhar, envie somente o link da publicação ou do repositório
+ oficial do Guia do Streamer.
+
+ Os termos completos estão no README.md e no LICENSE.txt deste projeto.
+ A ausência deste aviso em uma cópia não representa autorização de uso.
+
+===============================================================================
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: transparent !important;
+}
+
+#viewer_widget {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+.viewer-black {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 88px;
+  max-width: 100%;
+  padding: 16px 20px;
+  overflow: hidden;
+  color: #ffffff;
+  background: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  border-radius: 20px;
+  box-shadow:
+    0 18px 44px rgba(0, 0, 0, 0.52),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.045);
+}
+
+.viewer-black::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 12%;
+  width: 48%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.95),
+    transparent
+  );
+}
+
+.live-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 auto;
+  padding: 8px 11px;
+  color: #ff5269;
+  background: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ff4057;
+  box-shadow: 0 0 0 0 rgba(255, 64, 87, 0.55);
+  animation: live-pulse 1.7s infinite;
+}
+
+.total-viewers {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  column-gap: 9px;
+  align-items: center;
+  flex: 0 0 auto;
+  min-width: 112px;
+}
+
+.eye-icon {
+  grid-row: 1 / 3;
+  width: 25px;
+  height: 25px;
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 1.8;
+  filter: drop-shadow(0 0 7px rgba(255, 255, 255, 0.28));
+}
+
+#total_count {
+  min-width: 1ch;
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 0.95;
+  font-variant-numeric: tabular-nums;
+}
+
+.total-label {
+  margin-top: 3px;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.divider {
+  width: 1px;
+  height: 42px;
+  flex: 0 0 auto;
+  background: linear-gradient(
+    transparent,
+    rgba(255, 255, 255, 0.72),
+    transparent
+  );
+}
+
+#platform_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin: 0;
+}
+
+.platform-item {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-width: 62px;
+  min-height: 42px;
+  margin: 0 !important;
+  padding: 8px 11px;
+  color: #ffffff;
+  background: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.44);
+  border-radius: 12px;
+  font-size: 19px !important;
+  font-weight: 800 !important;
+  font-variant-numeric: tabular-nums;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: transform 180ms ease, border-color 180ms ease;
+}
+
+.platform-item:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.75);
+}
+
+.platform-icon {
+  font-size: 20px;
+  line-height: 1;
+  filter: drop-shadow(0 0 6px currentColor);
+}
+
+.platform-img {
+  width: 20px !important;
+  height: 20px !important;
+  object-fit: contain;
+}
+
+.platform-img:not([src]),
+.platform-img[src=""] {
+  display: none;
+}
+
+.viewer-black.count-changed {
+  animation: count-pop 420ms ease-out;
+}
+
+@keyframes live-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 64, 87, 0.55);
+  }
+  65% {
+    box-shadow: 0 0 0 8px rgba(255, 64, 87, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 64, 87, 0);
+  }
+}
+
+@keyframes count-pop {
+  0% { transform: scale(1); }
+  45% { transform: scale(1.018); }
+  100% { transform: scale(1); }
+}
+
+@media (max-width: 620px) {
+  .viewer-black {
+    gap: 12px;
+    padding: 13px;
+  }
+
+  .total-label,
+  .divider {
+    display: none;
+  }
+
+  .total-viewers {
+    display: flex;
+    min-width: auto;
+  }
+
+  .platform-item {
+    min-width: 52px;
+    padding: 7px 9px;
+  }
+}
