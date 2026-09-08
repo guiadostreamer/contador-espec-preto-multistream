@@ -4,6 +4,12 @@ Widget visual para exibir, em uma única barra, o total de espectadores e a audi
 
 Esta é a edição preta estática do contador: fundo preto sólido, contornos brancos e estrutura horizontal compacta. Ela foi criada para quem prefere um visual sóbrio, limpo e sem efeitos decorativos em movimento.
 
+## Prévia e tutorial
+
+[![Contador de Espectadores Guia Preto Multistream](preview-contador-preto-estatico.png)](https://youtu.be/rku8mhmT6jo)
+
+▶️ **[Assista ao tutorial completo no YouTube](https://youtu.be/rku8mhmT6jo)**
+
 > **AVISO DE DIREITOS AUTORAIS E LICENÇA**  
 > Este repositório é público para facilitar o acesso ao widget, mas o código **não está em domínio público** e **não possui licença para redistribuição**. O uso é gratuito somente nas condições descritas neste documento e no arquivo `LICENSE.txt`.
 
